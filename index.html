@@ -4,10 +4,36 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>3D Model Viewer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
         <style>
+            .roboto-mono {
+                font-family: "Roboto Mono", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
             body {
                 margin: 0;
                 overflow: hidden;
+                background-color: white;
+            }
+            legend {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: gray;
+                font-family: "Roboto Mono", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
             }
             canvas {
                 display: block;
@@ -25,9 +51,52 @@
                 border-radius: 8px;
                 display: none;
             }
+            dl {
+                display: flex;
+                gap: 16px;
+                /* padding: 16px; */
+                margin: 0;
+                margin-top: 36px;
+            }
+
+            .color-square {
+                width: 24px;
+                height: 24px;
+            }
         </style>
     </head>
     <body>
+        <legend>
+            Chair (wooden)
+            <div>
+                <dl>
+                    <div
+                        class="color-square"
+                        style="background-color: #8b4513"
+                    ></div>
+                    <div
+                        class="color-square"
+                        style="background-color: #5c3218"
+                    ></div>
+                    <div
+                        class="color-square"
+                        style="background-color: #a0522d"
+                    ></div>
+                    <div
+                        class="color-square"
+                        style="background-color: #3a2113"
+                    ></div>
+                    <div
+                        class="color-square"
+                        style="background-color: #c4a484"
+                    ></div>
+                    <div
+                        class="color-square"
+                        style="background-color: #766154"
+                    ></div>
+                </dl>
+            </div>
+        </legend>
         <div id="loading">Loading model...</div>
         <script type="module" src="viewer.js"></script>
     </body>
